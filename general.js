@@ -1,5 +1,6 @@
 var request = require("request");
 var fs = require("fs");
+var moment = require ("moment");
 
 var GENERAL = function() {
     var divider =
@@ -59,6 +60,7 @@ var showData = [
     "Songs Name: " + data.tracks.items[0].name,
     "Album: " + data.tracks.items[0].album.name,
     "Link Preview: " + data.tracks.items[0].album.artists[0].external_urls.spotify,
+    "--------------------------------------------------------------"
    ].join("\n\n");
 
     
@@ -67,7 +69,7 @@ var showData = [
           if (err) throw err;
           console.log(showData);
         });
-
+    
     });
 
   };
